@@ -1,0 +1,14 @@
+
+resources: bequia-forum-resources
+
+API_DOMAIN: api.bequiaforum.com
+
+USER_POOL: user-pool-${opt:stage, self:provider.stage}
+USER_POOL_CLIENT: user-pool-client-${self:provider.environment.resources}-${opt:stage, self:provider.stage}
+COGNITO_POOL_ARN: arn:aws:cognito-idp:eu-central-1:170922421019:userpool/eu-central-1_ZzFjmjjPZ
+COGNITO_POOL_ID: eu-central-1_ZzFjmjjPZ
+COGNITO_POOL_CLIENT_ID: 1hvvgndoftjuema6nrcsse1drm
+
+DYNAMO_DB_REGION: ${opt:region, self:provider.region}
+DYNAMO_DB_ENDPOINT: https://dynamodb.${opt:region, self:provider.region}.amazonaws.com
+COGNITO_ENDPOINT: https://cognito-idp.${opt:region, self:provider.region}.amazonaws.com
